@@ -27,7 +27,7 @@ namespace SalesWebMvc.Models
 
         [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Base Salary")]
-        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
         [Range(100.0, 50000.0, ErrorMessage = "{0} must be from {1} to {2}")]
         public double BaseSalary { get; set; }
 
